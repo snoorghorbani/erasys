@@ -1,5 +1,35 @@
 # Erasys Monorepo
 
+## Architecture (text diagram)
+
+```
+apps/web-next (Next SSR)
+	└─ uses @repo/shared (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
+
+apps/web-spa (Vite SPA)
+	└─ uses @repo/shared (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
+
+packages/shared   → data fetching + types + testable helpers
+packages/ui       → shared React components
+packages/assets   → shared static assets
+packages/tokens   → CSS variables + branding constants
+packages/tailwind-config → shared Tailwind preset
+```
+
+## Folder structure
+
+```
+apps/
+	web-next/
+	web-spa/
+packages/
+	shared/
+	ui/
+	assets/
+	tokens/
+	tailwind-config/
+```
+
 ## Apps
 
 - `apps/web-next` — Next.js SSR app
@@ -95,3 +125,17 @@ pnpm ci
 - Apps can depend on shared packages (`@repo/shared`, `@repo/ui`, `@repo/assets`, `@repo/tokens`).
 - Shared packages do not depend on apps.
 - Environment variables are app-owned; shared packages receive configuration via arguments.
+
+## Decisions & tradeoffs
+
+- **Env vars are app-scoped**: avoids leaking secrets and keeps shared packages pure.
+- **Shared UI + data helpers**: maximizes reuse without coupling to Next/Vite APIs.
+- **SSR in Next**: improves SEO and first paint, with revalidation for freshness.
+- **SPA uses Vite proxy for CORS**: simple local dev setup; production would use a backend proxy if needed.
+
+## What I’d improve with more time
+
+- Add JSON-LD structured data and a proper sitemap/robots in Next.
+- Add MSW integration tests for API flows.
+- Add automated contrast checks in CI.
+- Add image placeholders and progressive loading.
