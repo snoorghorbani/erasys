@@ -38,6 +38,16 @@ VITE_API_BASE_URL=/api
 
 Each app also has an `.env.example` template.
 
+### Centralized env access
+
+- `@repo/shared` provides a small resolver helper (`resolveApiBaseUrl`) to keep env access consistent.
+- Apps read their own env vars and pass values into shared helpers.
+
+### Secrets
+
+- Do not commit secrets.
+- Use `.env.local` for local secrets and CI secrets for production.
+
 ## Useful scripts
 
 ```sh
