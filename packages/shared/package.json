@@ -1,0 +1,22 @@
+{
+    "name": "@repo/shared",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./src/index.ts",
+        "./*": "./src/*.ts"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@types/node": "^22.15.3",
+        "typescript": "^5.9.2",
+        "vitest": "^2.1.9"
+    },
+    "dependencies": {
+        "@repo/tokens": "workspace:*"
+    }
+}

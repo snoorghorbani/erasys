@@ -1,0 +1,8 @@
+@import "tailwindcss";
+/* @import "@repo/tokens/variables.css"; */
+@import "../../../packages/tokens/src/variables.css";
+
+
+@source "../**/*.{ts,tsx}";
+@source "../containers/**/*.{ts,tsx}";
+@source "../../../packages/ui/src/**/*.{ts,tsx}";

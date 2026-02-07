@@ -1,0 +1,37 @@
+{
+  "name": "turbo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:ci": "turbo run lint -- --max-warnings 0",
+    "lint:fix": "turbo run lint -- --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "format:staged": "lint-staged",
+    "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "test:watch": "turbo run test --watch",
+    "test:e2e:ui": "playwright test --ui",
+    "check": "pnpm lint:ci && pnpm format:check && pnpm check-types",
+    "prepare": "husky install",
+    "ci": "pnpm check && pnpm test",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.7.4",
+    "turbo": "^2.8.3",
+    "typescript": "5.9.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
