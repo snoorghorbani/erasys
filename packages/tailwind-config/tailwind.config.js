@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    safelist: ["bg-background", "text-foreground"],
     theme: {
         extend: {
             colors: {
-                brand: {
-                    primary: "#4f46e5",
-                    secondary: "#9333ea",
-                },
+                background: "var(--background)",
+                foreground: "var(--foreground)",
             },
             borderRadius: {
                 xl: "1rem",

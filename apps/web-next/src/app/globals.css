@@ -1,5 +1,3 @@
-@import "../../../../packages/tokens/src/variables.css";
+@config "../../tailwind.config.js";
 @import "tailwindcss";
-
-@source "../../**/*.{ts,tsx}";
-@source "../../../../packages/ui/src/**/*.{ts,tsx}";
+@import "../../../../packages/tokens/src/variables.css";

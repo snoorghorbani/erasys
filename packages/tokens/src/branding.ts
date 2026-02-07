@@ -1,7 +1,7 @@
 export const APP_NAME = "HUNQZ";
 export const APP_DESCRIPTION = "HUNQZ";
 export const THEME_COLOR = "#000000";
-export const BACKGROUND_COLOR = "#001016";
+export const BACKGROUND_COLOR = "#000000";
 export const START_URL = "/pwa";
 export const API_BASE_URL = "https://www.hunqz.com";
 
