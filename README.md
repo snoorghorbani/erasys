@@ -75,3 +75,23 @@ pnpm ci
 
 - ESLint includes `eslint-plugin-jsx-a11y` rules for JSX accessibility.
 - Basic contrast audit: verify text/background pairs in both apps (use browser devtools or a contrast checker).
+
+## Monorepo hygiene
+
+### Why Turborepo
+
+- Task orchestration across apps and packages.
+- Deterministic caching for build/lint/test.
+- Clear dependency-aware pipelines.
+
+### Shared configs
+
+- TypeScript config: `@repo/typescript-config`
+- ESLint config: `@repo/eslint-config`
+- Tailwind preset: `@repo/tailwind-config`
+
+### Dependency boundaries
+
+- Apps can depend on shared packages (`@repo/shared`, `@repo/ui`, `@repo/assets`, `@repo/tokens`).
+- Shared packages do not depend on apps.
+- Environment variables are app-owned; shared packages receive configuration via arguments.
