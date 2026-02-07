@@ -21,7 +21,7 @@ export function ProfileGridWithNextImage({ images }: Props) {
                     alt={img.alt ?? ""}
                     width={300}
                     height={300}
-                    className="rounded-lg object-cover"
+                    className="rounded-lg object-cover w-full"
                 />
             )}
         />

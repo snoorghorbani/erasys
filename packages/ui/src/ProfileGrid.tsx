@@ -20,9 +20,7 @@ export function ProfileGrid({ images, renderImage }: Props) {
                         <img
                             src={img.src}
                             alt={img.alt ?? ""}
-                            width={300}
-                            height={300}
-                            className="rounded-lg object-cover"
+                            className="rounded-lg object-cover w-full"
                             style={{ maxWidth: "100%", height: "auto" }}
                         />
                     )}
