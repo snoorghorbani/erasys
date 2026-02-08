@@ -1,0 +1,23 @@
+@layer components {
+    .app-surface {
+        @apply bg-background text-foreground;
+    }
+
+    .app-card {
+        @apply rounded-xl border border-white/10 bg-background text-foreground shadow-sm;
+    }
+
+    .app-heading {
+        @apply text-balance text-2xl font-semibold tracking-tight;
+    }
+}
+
+@layer utilities {
+    .app-muted {
+        @apply text-foreground/70;
+    }
+
+    .app-ring {
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30;
+    }
+}

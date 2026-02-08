@@ -13,7 +13,7 @@ export function ProfileGrid({ images, renderImage }: Props) {
 	return (
 		<div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
 			{images.map((img) => (
-				<div key={img.id} className="mb-4 break-inside-avoid">
+				<div key={img.id} className="mb-4 break-inside-avoid app-card">
 					{renderImage ? (
 						renderImage(img)
 					) : (

@@ -5,6 +5,7 @@
     "exports": {
         ".": "./src/index.ts",
         "./variables.css": "./src/variables.css",
+        "./modifiers.css": "./src/modifiers.css",
         "./branding": "./src/branding.ts"
     }
 }
