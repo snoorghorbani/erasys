@@ -8,17 +8,17 @@ import App from "./App.tsx";
 document.title = APP_NAME;
 const themeMeta = document.querySelector("meta[name=theme-color]");
 if (themeMeta) {
-  themeMeta.setAttribute("content", THEME_COLOR);
+	themeMeta.setAttribute("content", THEME_COLOR);
 }
 const descMeta = document.querySelector("meta[name=description]");
 if (descMeta) {
-  descMeta.setAttribute("content", APP_DESCRIPTION);
+	descMeta.setAttribute("content", APP_DESCRIPTION);
 }
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
+	<StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</StrictMode>,
 );

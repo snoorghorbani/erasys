@@ -1,0 +1,32 @@
+{
+    "name": "@repo/hooks",
+    "version": "0.0.1",
+    "private": true,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./src/index.ts",
+        "./useAsync": "./src/useAsync.ts",
+        "./react/*": "./src/react/*.ts",
+        "./async/*": "./src/async/*.ts",
+        "./data/*": "./src/data/*.ts",
+        "./browser/*": "./src/browser/*.ts",
+        "./domain/*": "./src/domain/*.ts"
+    },
+    "scripts": {
+        "build": "tsc",
+        "check-types": "tsc --noEmit",
+        "lint": "eslint . --max-warnings 0"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "@types/react": "^19.2.2",
+        "eslint": "^9.39.1",
+        "typescript": "5.9.2"
+    },
+    "dependencies": {
+        "@repo/api": "workspace:*",
+        "react": "^19.2.0"
+    }
+}

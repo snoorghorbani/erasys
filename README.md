@@ -4,12 +4,12 @@
 
 ```
 apps/web-next (Next SSR)
-	└─ uses @repo/shared (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
+	└─ uses @repo/api (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
 
 apps/web-spa (Vite SPA)
-	└─ uses @repo/shared (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
+	└─ uses @repo/api (data) + @repo/ui (UI) + @repo/assets + @repo/tokens
 
-packages/shared   → data fetching + types + testable helpers
+packages/api      → data fetching + types + testable helpers
 packages/ui       → shared React components
 packages/assets   → shared static assets
 packages/tokens   → CSS variables + branding constants
@@ -23,7 +23,7 @@ apps/
 	web-next/
 	web-spa/
 packages/
-	shared/
+	api/
 	ui/
 	assets/
 	tokens/
@@ -37,7 +37,7 @@ packages/
 
 ## Shared Packages
 
-- `@repo/shared` — data fetching + types
+- `@repo/api` — data fetching + types
 - `@repo/ui` — shared UI components
 - `@repo/assets` — shared design assets
 - `@repo/tokens` — shared CSS variables + branding constants
@@ -70,7 +70,7 @@ Each app also has an `.env.example` template.
 
 ### Centralized env access
 
-- `@repo/shared` provides a small resolver helper (`resolveApiBaseUrl`) to keep env access consistent.
+- `@repo/api` provides a small resolver helper (`resolveApiBaseUrl`) to keep env access consistent.
 - Apps read their own env vars and pass values into shared helpers.
 
 ### Secrets
@@ -122,7 +122,7 @@ pnpm ci
 
 ### Dependency boundaries
 
-- Apps can depend on shared packages (`@repo/shared`, `@repo/ui`, `@repo/assets`, `@repo/tokens`).
+- Apps can depend on shared packages (`@repo/api`, `@repo/ui`, `@repo/assets`, `@repo/tokens`).
 - Shared packages do not depend on apps.
 - Environment variables are app-owned; shared packages receive configuration via arguments.
 

@@ -1,1 +1,1 @@
-export const logoUrl = new URL("./logo.png", import.meta.url).toString();
+export { default as logoUrl } from "./logo.png";
