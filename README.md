@@ -84,6 +84,9 @@ Each app also has an `.env.example` template.
 pnpm lint
 pnpm lint:ci
 pnpm lint:fix
+pnpm clean
+pnpm fresh
+pnpm graph
 pnpm check-types
 pnpm test
 pnpm test:watch
@@ -95,6 +98,26 @@ pnpm format:staged
 pnpm check
 pnpm ci
 ```
+
+## Git hooks & commit conventions
+
+- Husky hooks:
+    - pre-commit: runs `pnpm format:staged`
+    - commit-msg: enforces Conventional Commits via `commitlint`
+
+### Commit message format
+
+```
+type(scope): subject
+
+body (optional)
+footer (optional)
+```
+
+Examples:
+
+- `feat(ui): add profile card variants`
+- `fix(api): handle empty profile response`
 
 ## E2E tests (Playwright)
 
@@ -139,3 +162,11 @@ pnpm ci
 - Add MSW integration tests for API flows.
 - Add automated contrast checks in CI.
 - Add image placeholders and progressive loading.
+
+## TODO
+
+25. Add Monitoring
+    - Error tracking (Sentry)
+    - Performance monitoring (Web Vitals)
+    - Analytics integration
+    - Logging strategy

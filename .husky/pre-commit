@@ -1,0 +1,12 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use 22 >/dev/null 2>&1
+
+ROOT_DIR=$(git rev-parse --show-toplevel)
+cd "$ROOT_DIR" || exit 1
+
+if [ -x "$ROOT_DIR/node_modules/.bin/lint-staged" ]; then
+	"$ROOT_DIR/node_modules/.bin/lint-staged"
+else
+	pnpm dlx lint-staged
+fi
