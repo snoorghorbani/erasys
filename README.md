@@ -129,6 +129,14 @@ Examples:
 - ESLint includes `eslint-plugin-jsx-a11y` rules for JSX accessibility.
 - Basic contrast audit: verify text/background pairs in both apps (use browser devtools or a contrast checker).
 
+## Optimization & caching
+
+// No caching mechanism
+// Add:
+// - SWR or React Query integration
+// - Service worker caching
+// - HTTP cache headers configuration
+
 ## Monorepo hygiene
 
 ### Why Turborepo
