@@ -1,6 +1,7 @@
 # Centralized Assets in Monorepo (React + Next.js)
 
 ## Goal
+
 - Centralize static assets (images, fonts, SVGs) in one package.
 - Reuse across multiple React and Next.js apps.
 - Ensure assets work in **both dev and production**.
@@ -47,12 +48,12 @@ export declare const bgUrl: string;
 
 ```json
 {
-  "name": "@monorepo/assets",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": ["dist"]
+	"name": "@monorepo/assets",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": ["dist"]
 }
 ```
 
@@ -65,10 +66,11 @@ pnpm add @monorepo/assets --workspace
 ```tsx
 import { logoUrl } from "@monorepo/assets";
 
-<img src={logoUrl} alt="logo" />
+<img src={logoUrl} alt="logo" />;
 ```
 
 ## Notes / Best Practices
+
 - Works in React, Next.js, and Vite.
 - Avoid fs or external directory imports for client-side assets.
 - For very large assets (videos, fonts), consider serving via public folder or CDN.
