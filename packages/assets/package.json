@@ -3,8 +3,16 @@
     "version": "0.0.1",
     "private": true,
     "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "exports": {
-        ".": "./src/index.ts",
-        "./logo.png": "./src/logo.png"
+        ".": "./dist/index.js",
+        "./logo.png": "./dist/logo.png"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.mjs"
     }
 }
