@@ -6,22 +6,45 @@ on:
   pull_request:
 
 jobs:
-  lint-test:
+  quality-check:
+    name: Quality & Tests
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "pnpm"
-      - name: Install
-        run: pnpm install
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Cache PNPM store
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Lint
         run: pnpm lint:ci
+
       - name: Typecheck
         run: pnpm check-types
-      - name: Tests
-        run: pnpm test
+
       - name: Format check
         run: pnpm format:check
+
+      - name: Run tests
+        run: pnpm test
+
+      #- name: Run Playwright e2e
+      #  run: pnpm test:e2e
