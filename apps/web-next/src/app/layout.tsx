@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "@repo/ui";
+import { FeatureFlagsProvider } from "../components/FeatureFlagsProvider";
+import { HeaderWithFlags } from "../components/HeaderWithFlags";
 import { APP_DESCRIPTION, APP_NAME, THEME_COLOR } from "@repo/tokens";
 import "./globals.css";
 
@@ -55,8 +56,10 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
 			>
-				<Header />
-				<main className="mx-auto w-full max-w-5xl px-6 py-6">{children}</main>
+				<FeatureFlagsProvider>
+					<HeaderWithFlags />
+					<main className="mx-auto w-full max-w-5xl px-6 py-6">{children}</main>
+				</FeatureFlagsProvider>
 			</body>
 		</html>
 	);

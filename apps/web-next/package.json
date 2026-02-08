@@ -13,6 +13,7 @@
     "@repo/tokens": "workspace:*",
     "@repo/api": "workspace:*",
     "@repo/ui": "workspace:*",
+    "launchdarkly-react-client-sdk": "^3.6.2",
     "next": "16.1.6",
     "react": "19.2.0",
     "react-dom": "19.2.0"

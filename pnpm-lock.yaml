@@ -47,6 +47,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      launchdarkly-react-client-sdk:
+        specifier: ^3.6.2
+        version: 3.9.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next:
         specifier: 16.1.6
         version: 16.1.6(@babel/core@7.29.0)(@playwright/test@1.58.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -1558,6 +1561,9 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
   baseline-browser-mapping@2.9.11:
     resolution: {integrity: sha512-Sg0xJUNDU1sJNGdfGWhVHX0kkZ+HWcvmVymJbj6NSgZZmW/8S9Y2HQ5euytnIgakgxN6papOAWiwDo1ctFDcoQ==}
 
@@ -1999,6 +2005,9 @@ packages:
     resolution: {integrity: sha512-knvyeauYhqjOYvQ66MznSMs83wmHrCycNEN6Ao+2AeYEfxUIkuiVxdEa1qlGEPK+We3n0THiDciYSsCcgW/DoA==}
     engines: {node: '>=12.0.0'}
 
+  fast-deep-equal@2.0.1:
+    resolution: {integrity: sha512-bCK/2Z4zLidyB4ReuIsvALH6w31YfAQDmXMqMx6FyfHqvBxtjC0eRumeSu4Bs3XtXwpyIywtSTrVT99BxY1f9w==}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -2180,6 +2189,9 @@ packages:
 
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
+
+  hoist-non-react-statics@3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
@@ -2413,6 +2425,18 @@ packages:
   language-tags@1.0.9:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
+
+  launchdarkly-js-client-sdk@3.9.0:
+    resolution: {integrity: sha512-uPL9il6dOZrVQqEcpjDYc2c7HtBTlKpLJb1Q0187i4UokBVZwBXWKjTnNk9hkwaDD5PGD4puoe7POikrR8ACwQ==}
+
+  launchdarkly-js-sdk-common@5.8.0:
+    resolution: {integrity: sha512-9X70K3kN1fuR6ZnRudkH7etMgFhi3sEU0mnJ+y2nhID+DpfkNDVnYUGnUs8/s4tsSDs7Q7Gpm4qnr3oqOqT9+A==}
+
+  launchdarkly-react-client-sdk@3.9.0:
+    resolution: {integrity: sha512-Ayw6v5nfT0YoshUI89YH7lkOu+qAEtp9t743+dS6xnFq1IVOnckFlz4AoHa6smVjC3nPzj5n0dCLsRVfVIVEOg==}
+    peerDependencies:
+      react: ^16.6.3 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^16.8.4 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -3325,6 +3349,10 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  uuid@8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
 
   vite-node@2.1.9:
     resolution: {integrity: sha512-AM9aQ/IPrW/6ENLQg3AGY4K1N2TGZdR5e4gu/MmmR2xR3Ll1+dib+nook92g4TV3PXVyeyxdWwtaCAiUL0hMxA==}
@@ -4704,6 +4732,8 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  base64-js@1.5.1: {}
+
   baseline-browser-mapping@2.9.11: {}
 
   brace-expansion@1.1.12:
@@ -5307,6 +5337,8 @@ snapshots:
 
   expect-type@1.3.0: {}
 
+  fast-deep-equal@2.0.1: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.1:
@@ -5478,6 +5510,10 @@ snapshots:
   hermes-parser@0.25.1:
     dependencies:
       hermes-estree: 0.25.1
+
+  hoist-non-react-statics@3.3.2:
+    dependencies:
+      react-is: 16.13.1
 
   human-signals@5.0.0: {}
 
@@ -5690,6 +5726,25 @@ snapshots:
   language-tags@1.0.9:
     dependencies:
       language-subtag-registry: 0.3.23
+
+  launchdarkly-js-client-sdk@3.9.0:
+    dependencies:
+      escape-string-regexp: 4.0.0
+      launchdarkly-js-sdk-common: 5.8.0
+
+  launchdarkly-js-sdk-common@5.8.0:
+    dependencies:
+      base64-js: 1.5.1
+      fast-deep-equal: 2.0.1
+      uuid: 8.3.2
+
+  launchdarkly-react-client-sdk@3.9.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      hoist-non-react-statics: 3.3.2
+      launchdarkly-js-client-sdk: 3.9.0
+      lodash.camelcase: 4.3.0
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
 
   levn@0.4.1:
     dependencies:
@@ -6655,6 +6710,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  uuid@8.3.2: {}
 
   vite-node@2.1.9(@types/node@22.15.3)(lightningcss@1.31.1):
     dependencies:

@@ -58,6 +58,7 @@ Next.js (apps/web-next):
 
 ```
 NEXT_PUBLIC_API_BASE_URL=https://www.hunqz.com
+NEXT_PUBLIC_LD_CLIENT_SIDE_ID=
 ```
 
 SPA (apps/web-spa):
@@ -77,6 +78,13 @@ Each app also has an `.env.example` template.
 
 - Do not commit secrets.
 - Use `.env.local` for local secrets and CI secrets for production.
+
+## Feature flags (LaunchDarkly)
+
+- LaunchDarkly is used only in the Next app (`apps/web-next`).
+- The client-side ID is provided via `NEXT_PUBLIC_LD_CLIENT_SIDE_ID`.
+- Flag keys are defined in code (see [apps/web-next/src/lib/flags.ts](apps/web-next/src/lib/flags.ts)) rather than env vars.
+- Current flag: `showHomeButton` toggles the Home button in the header.
 
 ## Useful scripts
 
