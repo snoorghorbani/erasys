@@ -170,10 +170,7 @@ Examples:
 - Add MSW integration tests for API flows.
 - Add automated contrast checks in CI.
 - Add image placeholders and progressive loading.
-
-## TODO
-
-25. Add Monitoring
+- Add Monitoring:
     - Error tracking (Sentry)
     - Performance monitoring (Web Vitals)
     - Analytics integration
