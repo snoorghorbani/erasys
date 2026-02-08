@@ -18,10 +18,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: "npm"
 
-      - name: Install pnpm
-        run: npm install -g pnpm@9.0.0
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
 
       - name: Cache PNPM store
         uses: actions/cache@v3
