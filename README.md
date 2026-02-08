@@ -170,6 +170,11 @@ Examples:
 - Add MSW integration tests for API flows.
 - Add automated contrast checks in CI.
 - Add image placeholders and progressive loading.
+- Design System:
+    - Missing design tokens: No comprehensive color palette, spacing scale, typography definitions
+    - Add component variants: Button, Input, Card components with variants
+    - Create Storybook: For component documentation and testing
+    - Add dark mode toggle: Currently only CSS variables exist
 - Add Monitoring:
     - Error tracking (Sentry)
     - Performance monitoring (Web Vitals)
