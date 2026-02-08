@@ -135,7 +135,6 @@ Examples:
 ## Accessibility checks
 
 - ESLint includes `eslint-plugin-jsx-a11y` rules for JSX accessibility.
-- Basic contrast audit: verify text/background pairs in both apps (use browser devtools or a contrast checker).
 
 ## Optimization & caching
 
@@ -178,6 +177,7 @@ Examples:
 - Add MSW integration tests for API flows.
 - Add automated contrast checks in CI.
 - Add image placeholders and progressive loading.
+- Use Changesets to version and release shared packages.
 - Design System:
     - Missing design tokens: No comprehensive color palette, spacing scale, typography definitions
     - Add component variants: Button, Input, Card components with variants
